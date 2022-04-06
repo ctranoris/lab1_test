@@ -19,6 +19,10 @@ public class PersonLab {
 	
 	private String lastName;
 
+
+	private String PhoneNumber;
+	
+	
 	public String getFirstName() {
 		return firstName;
 	}
