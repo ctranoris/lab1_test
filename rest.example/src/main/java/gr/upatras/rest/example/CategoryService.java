@@ -52,18 +52,28 @@ public class CategoryService implements ICategoryService {
 		Category c = new Category(ix, catToAdd.getName());
 		for (Product p : catToAdd.getProducts()) {
 			Product productToAdd = productService.findById(p.getId());
-			c.getProducts().add(productToAdd);
+			if ( productToAdd != null ) {
+				c.getProducts().add(productToAdd);
+			}
+			
 		}
 		categories.add( c );
 		return c;
 	}
 
 	@Override
-	public Category editCategory(Category c) {
-		Category editCat = findById( c.getId() );
+	public Category editCategory(Category catToAdd) {
+		Category editCat = findById( catToAdd.getId() );
+		editCat.getProducts().clear();
 		if ( editCat != null ) {
-			editCat.setName( c.getName() );
-			editCat.setProducts( c.getProducts()  );
+			editCat.setName( catToAdd.getName() );
+			for (Product p : catToAdd.getProducts()) {
+				Product productToAdd = productService.findById(p.getId());
+				if ( productToAdd != null ) {
+					editCat.getProducts().add(productToAdd);
+				}
+				
+			}
 			
 			return editCat;
 		}

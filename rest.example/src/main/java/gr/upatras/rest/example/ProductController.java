@@ -51,7 +51,7 @@ public class ProductController {
 			@ApiResponse(code = 409, message = "Conflict", response = Error.class),
 			@ApiResponse(code = 500, message = "Internal Server Error", response = Error.class) })
 	@RequestMapping(value = "/product/{id}" , produces = {	"application/json;charset=utf-8" }, method = RequestMethod.GET)
-	public Product getProductById(int id) {
+	public Product getProductById( @ApiParam(value = "Identifier of the Category", required = true) @PathVariable("id") int id) {
 
 		log.info( String.format( "Will return product with id %s" , id) );
 		Product product = productService.findById(id);		
@@ -68,7 +68,7 @@ public class ProductController {
 			@ApiResponse(code = 409, message = "Conflict", response = Error.class),
 			@ApiResponse(code = 500, message = "Internal Server Error", response = Error.class) })
 	@RequestMapping(value = "/product/{id}" , produces = {	"application/json;charset=utf-8" }, method = RequestMethod.DELETE)
-	public ResponseEntity<Void> deletetById(int id) {
+	public ResponseEntity<Void> deletetById( @ApiParam(value = "Identifier of the Category", required = true) @PathVariable("id") int id) {
 		
 		try {
 
