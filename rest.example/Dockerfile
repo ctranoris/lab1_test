@@ -3,4 +3,4 @@ MAINTAINER ece.upatras.gr
 COPY target/rest.example-0.0.1-SNAPSHOT-exec.jar /opt/rest.example/
 WORKDIR /opt/rest.example/
 CMD ["java",  "-jar", "/opt/rest.example/rest.example-0.0.1-SNAPSHOT-exec.jar"]
-EXPOSE 8080
+EXPOSE 8888
