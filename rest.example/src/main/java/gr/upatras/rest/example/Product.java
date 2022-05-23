@@ -85,7 +85,7 @@ public class Product {
 	}
 
 	/**
-	 * @param noofproduct
+	 * @param noofproduct number of products
 	 */
 	public void setNoofproduct(int noofproduct) {
 		this.noofproduct = noofproduct;
