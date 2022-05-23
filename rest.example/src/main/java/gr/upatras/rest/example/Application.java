@@ -3,6 +3,10 @@ package gr.upatras.rest.example;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author ctranoris
+ *
+ */
 @SpringBootApplication
 public class Application {
 
