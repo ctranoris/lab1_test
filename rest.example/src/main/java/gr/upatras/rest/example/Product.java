@@ -14,8 +14,11 @@ public class Product {
 	 * 
 	 */
 	private String pname;
+	/** 	 */
 	private String batchno;
+	/** 	 */
 	private double price;
+	/** 	 */
 	private int noofproduct;
 
 	public int getId() {
