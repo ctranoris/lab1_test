@@ -1,5 +1,5 @@
 
-Installing Kubernetes on a Linux machine
+<h1>Installing Kubernetes on a Linux machine</h1>
 
 Selecting a virtualization software: we recommend using VirtualBox. 
 You need at least 2 CPUs, 4GB RAM
@@ -8,13 +8,13 @@ We recommend using the Ubuntu Server Linux distribution. You can download the im
 
 Remember during the installation, when asked about the disk partition options, to select the manual setup and to not create a swap partition.
 
-Installing Docker
+<h2>Installing Docker</h2>
 
 There are several ways to install Docker. One of the ways is using a tool called snap. However, we learned that the installation through snap sometimes does not work well with Kubernetes. Therefore, we recommend the installation procedure that sets up the Docker repository in apt. The process can be found here: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
 At this stage, it is important to configure Docker to use the systemd for the management of the container’s cgroups. This can be done by following the steps here: https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker
 
-Installing Kubernetes
+<h2>Installing Kubernetes</h2>
 
 The installation procedures for Kubernetes can be found here: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 Remember that you can skip the Installing runtime part since we already installed Docker in the previous step.
@@ -33,7 +33,7 @@ If you want to run containers in the same machine that is the Kubernetes main ma
 
 If you are sharing this Kubernetes installation among different applications, it is a good practice to create a namespace for each application, e.g., teraflow. This can be done using this official Kubernetes namespaces documentation.
 
-Validating installation
+<h2>Validating installation</h2>
 
 To validate your installation, you can run
 
