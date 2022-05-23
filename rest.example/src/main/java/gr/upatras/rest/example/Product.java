@@ -6,7 +6,13 @@ package gr.upatras.rest.example;
  */
 public class Product {
 
+	/**
+	 * 
+	 */
 	private int id;
+	/**
+	 * 
+	 */
 	private String pname;
 	private String batchno;
 	private double price;
@@ -61,5 +67,4 @@ public class Product {
 		this.noofproduct = noofproduct;
 	}
 
-	
 }
