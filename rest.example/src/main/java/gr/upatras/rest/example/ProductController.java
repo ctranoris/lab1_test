@@ -16,6 +16,10 @@ import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author ctranoris
+ *
+ */
 @RestController
 public class ProductController {
 	@Autowired

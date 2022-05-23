@@ -32,6 +32,10 @@ public class Category {
 	 * @param id
 	 * @param name
 	 */
+	/**
+	 * @param id
+	 * @param name
+	 */
 	public Category(int id, String name) {
 		super();
 		this.id = id;
@@ -39,26 +43,44 @@ public class Category {
 	}
 
 
+	/**
+	 * @return
+	 */
 	public int getId() {
 		return id;
 	}
 
+	/**
+	 * @param id
+	 */
 	public void setId(int id) {
 		this.id = id;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * @param name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	/**
+	 * @return
+	 */
 	public List<Product> getProducts() {
 		return products;
 	}
 
+	/**
+	 * @param products
+	 */
 	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
